@@ -1,11 +1,12 @@
-version: "27.5.1"
+version: "3.9"
 
 services:
- mongo: mongo:latest
- container_name: some-mongod
- restart: always
- environmet:
-    MONGO_INITDB_ROOT_USERNAME: root
-    MONGO_INITDB_ROOT_PASSWORD: root 
- ports:
- - 27017:27017
+  mongo:
+    image: mongo:latest
+    container_name: some-mongod
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - "27017:27017"
